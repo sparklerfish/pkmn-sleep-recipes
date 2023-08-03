@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Pokemon Sleep Recipes</title>
+    </head>
+    <body>
+        <main>
+            <h1>Pokemon Sleep Recipes</h1>
+            <section>
+                <div class="left">
+                    <div>
+                        <h2>Category</h2>
+                        <select name="category" id="category" onchange="filterRecipes()">
+                            <option value="curries">Curries</option>
+                            <option value="salads">Salads</option>
+                            <option value="desserts">Desserts/Drinks</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h2>Ingredients</h2>
+                        <form id="ingredient-inputs">
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2>Recipes</h2>
+                    <ul id="recipe-list">
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <script defer src="./recipes.js"></script>
+        <script defer src="./index.js"></script>
+    </body>
+</html>
+<!DOCTYPE html>
