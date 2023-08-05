@@ -96,7 +96,7 @@ const inputs = Object.entries(ingredients).forEach(([ingredient, quantity]) => {
     input.min = 0;
     input.max = 999;
     input.step = 1;
-    input.addEventListener('keyup', handleInputChange);
+    input.addEventListener('input', handleInputChange);
     input.addEventListener('click', (event) => event.target.select());
 
     div.appendChild(label);
