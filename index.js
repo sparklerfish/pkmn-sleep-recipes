@@ -90,13 +90,14 @@ const inputs = Object.entries(ingredients).forEach(([ingredient, quantity]) => {
     label.htmlFor = ingredient;
 
     const input = document.createElement('input');
-    input.type = 'number';
+    input.type = 'tel';
     input.name = ingredient;
     input.value = quantity;
     input.min = 0;
     input.max = 999;
     input.step = 1;
     input.addEventListener('change', handleInputChange);
+    input.addEventListener('click', (event) => event.target.select());
 
     div.appendChild(label);
     div.appendChild(input);

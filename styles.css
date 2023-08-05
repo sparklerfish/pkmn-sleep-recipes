@@ -160,6 +160,7 @@ p {
         grid-column-start: 1;
         grid-row-start: 1;
         text-align: right;
+        width: 4rem;
     }
 
     select {
