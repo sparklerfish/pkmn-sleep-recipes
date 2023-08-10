@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/dffb73e9db.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styles.css">
         <title>Pokemon Sleep Recipes</title>
     </head>
@@ -21,8 +22,20 @@
                     </div>
                     <div>
                         <h2>Ingredients</h2>
-                        <form id="ingredient-inputs">
-                        </form>
+                        <label id="file-input">
+                            <input type="file" accept="image/*" onchange="recognizeFile((window.lastFile=this.files[0]))">
+                            <span>Upload Screenshot</span>
+                            <i class="fa-solid fa-arrow-up-from-bracket" style="color: #111111;"></i>
+                        </label>
+                        <p class="info">*BETA* Upload a screenshot of the ingredients in your bag. Please ensure your screenshot includes the full text of all ingredients and is not cut off.</p>
+                        <div class="inputs">
+                            <button class="manual-input collapsed" onclick="toggleCollapse(this)">
+                                Your Ingredients
+                                <i class="fa-solid fa-angles-down"></i>
+                            </button>
+                            <form id="ingredient-inputs" class="collapsed">
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="right">
@@ -32,7 +45,10 @@
                 </div>
             </section>
         </main>
+        <script src='https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js'></script>
+        <script defer src="./ingredients.js"></script>
         <script defer src="./recipes.js"></script>
+        <script defer src="./ocr.js"></script>
         <script defer src="./index.js"></script>
     </body>
 </html>
